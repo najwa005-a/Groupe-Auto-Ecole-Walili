@@ -6,7 +6,7 @@
   <title>Groupe Auto École Wallili - Meknès</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Splash screen */
+    /* Animation d’intro stylée */
     #intro {
       position: fixed;
       inset: 0;
@@ -17,62 +17,282 @@
       align-items: center;
       font-size: 3.5rem;
       font-weight: 700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       z-index: 9999;
-      animation: introAnim 4s ease forwards;
+      animation: introAnimation 4s ease forwards;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes introAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      40% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      80% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.7);
+        visibility: hidden;
+      }
+    }
+
+    /* Styles personnalisés */
+    .hero-section {
+      background-color: #f8f9ff !important;
+      padding: 80px 0;
       text-align: center;
     }
 
-    @keyframes introAnim {
-      0% { opacity: 0; transform: scale(0.7); }
-      40% { opacity: 1; transform: scale(1.1); }
-      80% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0.7); visibility: hidden; }
+    .footer {
+      background-color: #212529;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
     }
 
-    /* On cache le contenu du site au début */
-    #site-content {
-      display: none;
+    .logo-img, .card-img-top {
+      max-width: 100%;
+      border-radius: 10px;
     }
 
-    /* Afficher après l’animation */
-    #site-content.visible {
-      display: block;
+    .logo-img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .article-section {
+      padding: 50px 0;
+    }
+
+    .article {
+      margin-bottom: 30px;
+    }
+
+    .dotted-line {
+      border-top: 4px dotted #ff0000;
+      width: 50%;
+      margin: auto;
+    }
+
+    .text-primary {
+      color: #ff0000 !important;
+    }
+
+    .text-warning {
+      color: #ff4500 !important;
+    }
+
+    .bg-light {
+      background-color: #ffffff !important;
+    }
+
+    .bg-white {
+      background-color: #f8f9ff !important;
+    }
+
+    .navbar-dark .navbar-brand, .navbar-dark .navbar-toggler {
+      color: #ffffff;
+    }
+
+    .social-btn {
+      display: inline-block;
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff0000;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .social-btn:hover {
+      background-color: #cc0000;
+    }
+
+    /* Responsive iframe */
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-<!-- ANIMATION -->
+<!-- INTRO CINÉMATIQUE -->
 <div id="intro">Groupe Auto École Wallili</div>
 
-<!-- SITE -->
-<div id="site-content">
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-    <div class="container">
-      <a class="navbar-brand" href="#">Groupe Auto École Wallili</a>
-      <span class="text-white">Meknès, Maroc | Tél : +212 620091202</span>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="#">Groupe Auto École Wallili</a>
+    <span class="text-white">Meknès, Maroc | Tél : +212 620091202</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container">
+    <img src="logo.JPG" alt="Logo Auto École Wallili" class="logo-img img-fluid" />
+    <h1 class="display-5">Bienvenue chez Groupe École Wallili</h1>
+    <p class="lead">Formation de qualité pour tous les types de permis à Meknès, Maroc.</p>
+  </div>
+</section>
+
+<!-- TYPES DE PERMIS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Types de permis disponibles</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <h5>Permis A</h5>
+        <p>Moto – Deux-roues de toutes cylindrées</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Permis B</h5>
+        <p>Voitures légères – le plus demandé</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Permis C & D</h5>
+        <p>Camions et véhicules de transport en commun</p>
+      </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- SECTION HÉRO -->
-  <section class="hero-section text-center py-5 bg-light">
-    <div class="container">
-      <img src="logo.JPG" alt="Logo Auto École Wallili" class="img-fluid" style="max-width: 200px;" />
-      <h1 class="display-5 mt-4">Bienvenue chez Groupe École Wallili</h1>
-      <p class="lead">Formation de qualité pour tous les types de permis à Meknès, Maroc.</p>
+<!-- ARTICLES -->
+<section class="article-section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Nos articles</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="article">
+          <h3>Conseils pour réussir votre permis de conduire</h3>
+          <p>Découvrez nos astuces et conseils pour vous préparer efficacement à l'examen du permis de conduire.</p>
+          <a href="#" class="btn btn-primary">Lire la suite</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="article">
+          <h3>Les avantages de choisir Auto École Wallili</h3>
+          <p>Apprenez pourquoi notre auto-école est le meilleur choix pour votre formation à la conduite.</p>
+          <a href="#" class="btn btn-primary">Lire la suite</a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ... reste du site ici (les sections, les cartes, le footer, etc.) ... -->
-</div>
+<!-- COMMENT ÇA MARCHE -->
+<section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold text-primary mb-3">Comment ça marche</h2>
+    <p class="lead">
+      L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
+      <strong class="text-primary">par Groupe École Wallili</strong>
+    </p>
+    <hr class="dotted-line my-4" />
+    <div class="row mt-5">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="as.jpg" class="card-img-top" alt="Code de la route" />
+          <div class="card-body">
+            <h5 class="fw-bold text-warning">1. Code de la route</h5>
+            <p>Apprenez les règles de circulation avec nos cours interactifs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="pic2.jpg" class="card-img-top" alt="Cours de conduite" />
+          <div class="card-body">
+            <h5 class="fw-bold text-warning">2. Cours de conduite</h5>
+            <p>Maîtrisez la pratique avec un encadrement professionnel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="IMG_5983.JPG" class="card-img-top" alt="Suivi personnalisé" />
+          <div class="card-body">
+            <h5 class="fw-bold text-warning">3. Suivi personnalisé</h5>
+            <p>Un accompagnement étape par étape pour garantir votre réussite.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="IMG_5984.JPG" class="card-img-top" alt="Démarches et Examen" />
+          <div class="card-body">
+            <h5 class="fw-bold text-warning">4. Démarches & Examen</h5>
+            <p>Nous vous guidons dans les démarches jusqu'à l'examen final.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- SCRIPT pour afficher le site après l’intro -->
+<!-- CONTACT -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Contactez-nous</h2>
+    <p>WhatsApp : <a href="https://wa.me/212638467805" target="_blank" rel="noopener noreferrer">+212 638 467805</a></p>
+    <a href="https://www.instagram.com/groupe_autoecole_walili?igsh=MW1qejh0aWl6dXBxMQ==" class="social-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.tiktok.com/@auto_ecolewallili?_t=ZM-8vc2ViRVYQv&_r=1" class="social-btn" target="_blank" rel="noopener noreferrer">TikTok</a>
+    <p>Adresse : Meknès, Mansour, Chehdia, derrière BIM</p>
+    <p>Adresse : Zegotta centre, Sidi Kacem</p>
+    <p>Adresse : Khénichet, Sidi Kacem</p>
+    <p>Adresse : Jorf El Melha, Sidi Kacem</p>
+    <p>Nos téléphones :</p>
+    <ul>
+      <li><a href="tel:+212620091202">+212 620-091202</a></li>
+      <li><a href="tel:+212638467805">+212 638-467805</a></li>
+      <li><a href="tel:+212538714036">+212 538–714036</a></li>
+    </ul>
+    <p>Notre email : <a href="mailto:autoecole.walili@gmail.com">autoecole.walili@gmail.com</a></p>
+    <p>Heures d'ouverture :</p>
+    <ul>
+      <li>Lundi - Vendredi : 09:00 - 18:00</li>
+      <li>Samedi : 09:00 - 12:00</li>
+    </ul>
+  </div>
+</section>
+
+<!-- LOCALISATION -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Notre localisation</h2>
+    <div class="mt-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.697473854359!2d-5.5829062!3d33.863617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdc58362d2959827%3A0xb35f59b9a622998a!2sAuto%20Ecole%20Wallili!5e0!3m2!1sfr!2sma!4v1628178121658!5m2!1sfr!2sma"
+        loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  // Après 4s, on masque l'animation pour afficher la page
   setTimeout(() => {
-    document.getElementById("intro").style.display = "none";
-    document.getElementById("site-content").classList.add("visible");
-  }, 4000); // 4 secondes d’animation
+    const intro = document.getElementById('intro');
+    if (intro) intro.style.display = 'none';
+  }, 4000);
 </script>
 
 </body>
