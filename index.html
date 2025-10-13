@@ -56,5 +56,123 @@
     /* Limite la taille des images dans les galeries */
     .gallery img, .avis-gallery img {
       width: 100%;
-      max-width: 300px; /* Limite l*
+      max-width: 300px; /* Limite la largeur des images */
+      height: auto;
+      margin: 10px;
+    }
 
+    /* Pour les images dans les cartes (sections "Comment ça marche") */
+    .card-img-top {
+      max-width: 100%;
+      height: 200px; /* Limite la hauteur */
+      object-fit: cover; /* S'assure que l'image couvre son conteneur sans déformation */
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Barre de traduction -->
+<div style="position: fixed; top: 10px; right: 10px; z-index: 99999;">
+  <select id="languageSelector" onchange="translatePage()" style="padding: 5px 10px; font-weight: bold;">
+    <option value="fr">Français</option>
+    <option value="ar">العربية</option>
+  </select>
+</div>
+
+<!-- INTRO -->
+<div id="intro">Groupe Auto École Wallili</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand trad" href="#">Groupe Auto École Wallili</a>
+    <span class="text-white trad">Meknès, Maroc | Tél : +212 620091202</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container">
+    <img src="logo.JPG" alt="Logo Auto École Wallili" class="logo-img img-fluid" />
+    <h1 class="display-5 trad">Bienvenue chez Groupe École Wallili</h1>
+    <p class="lead trad">Formation de qualité pour tous les types de permis à Meknès, Maroc.</p>
+  </div>
+</section>
+
+  <!-- SECTION À PROPOS -->
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc. 
+    Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.</p>
+  </section>
+
+  <!-- SECTION TÉMOIGNAGES -->
+  <section id="temoignages">
+    <div class="temoignages">
+      <h2>🏆 Nos Élèves Réussissent !</h2>
+      <p>Découvrez les réussites de nos élèves et leurs témoignages.</p>
+      <div class="gallery">
+        <img src="IMG_6635.jpg" alt="Avis élève 1">
+        <img src="IMG_6636.jpg" alt="Avis élève 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION AVIS ET NOTES -->
+  <section id="avis">
+    <div class="avis">
+      <h2>⭐ Avis & Notes de nos élèves</h2>
+      <p>Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !</p>
+      <div class="avis-gallery">
+        <img src="7B07324D-FF12-431F-B9E7-3B7D138B7D8E.jpeg" alt="Avis 1">
+        <img src="7DCDBBAB-E1CF-4AFA-9EEF-36C03AE6ED0A.jpeg" alt="Avis 2">
+      </div>
+    </div>
+  </section>
+
+<!-- TYPES DE PERMIS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 trad">Types de permis disponibles</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <h5 class="trad">Permis A</h5>
+        <p class="trad">Moto – Deux-roues de toutes cylindrées</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="trad">Permis B</h5>
+        <p class="trad">Voitures légères – le plus demandé</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="trad">Permis C & D</h5>
+        <p class="trad">Camions et véhicules de transport en commun</p>
+      </div>
+    </div>
+  </div>
+
+<!-- COMMENT ÇA MARCHE -->
+<section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold text-primary mb-3 trad">Comment ça marche</h2>
+    <p class="lead trad">
+      L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
+      <strong class="text-primary trad">par Groupe École Wallili</strong>
+    </p>
+    <hr class="dotted-line my-4" />
+    <div class="row mt-5">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="as.jpg" class="card-img-top" alt="Code de la route" />
+          <div class="card-body">
+            <h5 class="fw-bold text-warning trad">1. Code de la route</h5>
+            <p class="trad">Apprenez les règles de circulation avec nos cours interactifs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="pic2.jpg" class="card-img-top" alt="Cours de conduite" />
+          <div class="card-body">
+            <h5 class="fw-bold text-warning trad">2. Cours de conduite</h5>
+            <p class="trad">Maîtrisez la pratique avec un encadrement professionnel.</
