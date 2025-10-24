@@ -22,14 +22,12 @@
       text-align: center;
       padding: 20px;
     }
-
     @keyframes introAnimation {
       0% { opacity: 0; transform: scale(0.7); }
       40% { opacity: 1; transform: scale(1.1); }
       80% { opacity: 1; transform: scale(1); }
       100% { opacity: 0; transform: scale(0.7); visibility: hidden; }
     }
-
     .hero-section { background-color: #f8f9ff !important; padding: 80px 0; text-align: center; }
     .footer { background-color: #212529; color: white; padding: 20px 0; text-align: center; }
     .logo-img, .card-img-top { max-width: 100%; border-radius: 10px; }
@@ -77,6 +75,34 @@
   </div>
 </section>
 
+<!-- À PROPOS + RÉUSSITE + AVIS -->
+<section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">À propos</h2>
+    <p>
+      Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc.
+      Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.
+    </p>
+    <!-- Section Réussite avec deux photos -->
+    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 Nos Élèves Réussissent !</h3>
+    <p>Découvrez les réussites de nos élèves et leurs témoignages.</p>
+    <div class="row justify-content-center mb-4">
+      <div class="col-6 col-md-4 mb-3">
+        <img src="eleve1.jpg" alt="Élève réussi 1" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
+      </div>
+      <div class="col-6 col-md-4 mb-3">
+        <img src="eleve2.jpg" alt="Élève réussi 2" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
+      </div>
+    </div>
+    <!-- Section avis avec 1 photo -->
+    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);">⭐ Avis & Notes de nos élèves</h3>
+    <p>Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !</p>
+    <div class="d-flex justify-content-center">
+      <img src="avis1.jpg" alt="Avis élève" class="img-fluid rounded-4 shadow-lg" style="max-height: 200px; object-fit: cover; width: auto; box-shadow: 0 6px 22px rgba(0,0,0,0.13), 0 1.5px 10px rgba(255,215,0,0.12);" />
+    </div>
+  </div>
+</section>
+
 <!-- TYPES DE PERMIS -->
 <section class="py-5 bg-light">
   <div class="container">
@@ -96,14 +122,13 @@
       </div>
     </div>
   </div>
-
+</section>
 
 <!-- COMMENT ÇA MARCHE -->
 <section class="py-5 bg-white text-center">
   <div class="container">
     <h2 class="fw-bold text-primary mb-3 trad">Comment ça marche</h2>
-    <p class="lead trad">
-      L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
+    <p class="lead trad">L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
       <strong class="text-primary trad">par Groupe École Wallili</strong>
     </p>
     <hr class="dotted-line my-4" />
@@ -193,7 +218,6 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <!-- Traduction -->
 <script>
   const translations = {
@@ -232,7 +256,6 @@
     },
     fr: {}
   };
-
   function translatePage() {
     const lang = document.getElementById("languageSelector").value;
     document.querySelectorAll(".trad").forEach(el => {
@@ -246,7 +269,6 @@
     });
   }
 </script>
-
 <!-- Masquer intro après 4s -->
 <script>
   setTimeout(() => {
@@ -254,6 +276,6 @@
     if (intro) intro.style.display = 'none';
   }, 4000);
 </script>
-
 </body>
 </html>
+
