@@ -6,7 +6,6 @@
   <title>Groupe Auto École Wallili - Meknès</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Animation intro */
     #intro {
       position: fixed;
       inset: 0;
@@ -29,8 +28,6 @@
       80% { opacity: 1; transform: scale(1); }
       100% { opacity: 0; transform: scale(0.7); visibility: hidden; }
     }
-
-    /* Effets 3D images et cartes */
     .img-fluid, .card-img-top {
       border-radius: 15px;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -42,8 +39,6 @@
       box-shadow: 0 25px 40px rgba(0,0,0,0.3);
       cursor: pointer;
     }
-
-    /* Bouton 3D */
     .btn-3d {
       position: relative;
       background: #b30000;
@@ -64,146 +59,12 @@
       transform: translateY(2px) rotateX(2deg);
       box-shadow: 0 4px #830000;
     }
-
-    /* Amélioration mineure */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f3f5f9;
-    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f3f5f9; }
   </style>
 </head>
 <body>
 
-<!-- Intro -->
-<div id="intro">[translate:Groupe Auto École Wallili]</div>
-
-<!-- Nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-  <div class="container">
-    <a class="navbar-brand trad" href="#">[translate:Groupe Auto École Wallili]</a>
-    <span class="text-white trad">[translate:Meknès, Maroc | Tél : +212 620091202]</span>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero-section text-center py-5">
-  <div class="container">
-    <img src="logo.JPG" alt="[translate:Logo Auto École Wallili]" class="logo-img img-fluid mx-auto d-block" style="max-width: 220px;" />
-    <h1 class="display-5 trad mt-3">[translate:Bienvenue chez Groupe École Wallili]</h1>
-    <p class="lead trad">[translate:Formation de qualité pour tous les types de permis à Meknès, Maroc.]</p>
-  </div>
-</section>
-
-<!-- À propos -->
-<section class="py-5 bg-white text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">[translate:À propos]</h2>
-    <p class="trad">
-      [translate:Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc. Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.]
-    </p>
-    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 [translate:Nos Élèves Réussissent !]</h3>
-    <p class="trad">[translate:Découvrez les réussites de nos élèves et leurs témoignages.]</p>
-    <div class="row justify-content-center mb-4">
-      <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6636.jpg" alt="[translate:Élève réussi 1]" class="img-fluid shadow-lg" style="max-height: 220px; object-fit: cover; width:100%;" />
-      </div>
-      <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6635.jpg" alt="[translate:Élève réussi 2]" class="img-fluid shadow-lg" style="max-height: 220px; object-fit: cover; width:100%;" />
-      </div>
-    </div>
-    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);">[translate:Avis ⭐⭐⭐⭐⭐]</h3>
-    <p class="trad">[translate:Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !]</p>
-    <div class="d-flex justify-content-center">
-      <img src="IMG_7249.jpg" alt="[translate:Avis élève]" class="img-fluid shadow-lg" style="max-height: 200px; object-fit: cover; width: auto;" />
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="py-5 bg-light text-center">
-  <div class="container">
-    <h2 class="mb-4 trad">[translate:Contactez-nous]</h2>
-    <p>WhatsApp : <a href="https://wa.me/212638467805" target="_blank">+212 638 467805</a></p>
-    <a href="https://www.instagram.com/autoecole_walili?igsh=d3IxbjNvNHBqMDVr" class="social-btn" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@auto_ecolewallili" class="social-btn" target="_blank">TikTok</a>
-    <p class="trad">[translate:Adresse : Meknès, Mansour, Chehdia, derrière BIM]</p>
-    <p class="trad">[translate:Adresse : Zegotta centre, Sidi Kacem]</p>
-    <p class="trad">[translate:Adresse : Jorf El Melha, Sidi Kacem]</p>
-    <p class="trad">[translate:Nos téléphones :]</p>
-    <ul>
-      <li><a href="tel:+212620091202">+212 620-091202</a></li>
-      <li><a href="tel:+212638467805">+212 638-467805</a></li>
-      <li><a href="tel:+212538714036">+212 538–714036</a></li>
-    </ul>
-    <p>Notre email : <a href="mailto:abdeslemterraf38@gmail.com">abdeslemterraf38@gmail.com</a></p>
-    <p class="trad">[translate:Heures d'ouverture :]</p>
-    <ul>
-      <li class="trad">[translate:Lundi - Vendredi : 09:00 - 18:00]</li>
-      <li class="trad">[translate:Samedi : 09:00 - 12:00]</li>
-    </ul>
-    <button class="btn-3d mt-3" onclick="window.location='mailto:abdeslemterraf38@gmail.com'">[translate:Envoyer un Email]</button>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer text-center p-3 bg-dark text-white mt-4">
-  <div class="container">
-    <p>&copy; 2025 Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.</p>
-  </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  // Traduction des textes
-  const translations = {
-    ar: {
-      "Groupe Auto École Wallili": "[translate:مجموعة مدارس وليلي لتعليم السياقة]",
-      "Meknès, Maroc | Tél : +212 620091202": "[translate:مكناس، المغرب | الهاتف: +212 620091202]",
-      "Bienvenue chez Groupe École Wallili": "[translate:مرحباً بكم في مجموعة مدارس وليلي]",
-      "Formation de qualité pour tous les types de permis à Meknès, Maroc.": "[translate:تكوين عالي الجودة لجميع أنواع رخص السياقة بمكناس، المغرب.]",
-      "À propos": "[translate:من نحن]",
-      "Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc. Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.":
-        "[translate:ترافقكم مجموعة مدارس وليلي نحو النجاح من خلال تكوينات عالية الجودة في عدة مدن مغربية. يضمن لكم مدربونا المحترفون تعلمًا مهنيًا وفعّالًا ملائمًا لكل متعلم.]",
-      "Nos Élèves Réussissent !": "[translate:نجاحات تلاميذنا!]",
-      "Découvrez les réussites de nos élèves et leurs témoignages.": "[translate:اكتشفوا نجاحات تلاميذنا وشهاداتهم.]",
-      "Avis ⭐⭐⭐⭐⭐": "[translate:تقييمات ⭐⭐⭐⭐⭐]",
-      "Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !": "[translate:اطلعوا على تقييمات تلاميذنا الحقيقيين، شكراً لثقتكم!]",
-      "Contactez-nous": "[translate:اتصل بنا]",
-      "Adresse : Meknès, Mansour, Chehdia, derrière BIM": "[translate:العنوان: مكناس، منصور، شهدية، خلف بيم]",
-      "Adresse : Zegotta centre, Sidi Kacem": "[translate:العنوان: زڭوطة، سيدي قاسم]",
-      "Adresse : Jorf El Melha, Sidi Kacem": "[translate:العنوان: جرف الملحة، سيدي قاسم]",
-      "Nos téléphones :": "[translate:أرقام الهاتف:]",
-      "Heures d'ouverture :": "[translate:ساعات العمل:]",
-      "Lundi - Vendredi : 09:00 - 18:00": "[translate:الإثنين - الجمعة : 09:00 - 18:00]",
-      "Samedi : 09:00 - 12:00": "[translate:السبت : 09:00 - 12:00]",
-      "Envoyer un Email": "[translate:أرسل بريدًا إلكترونيًا]"
-    },
-    fr: {}
-  };
-
-  function translatePage() {
-    const lang = document.getElementById("languageSelector").value;
-    document.querySelectorAll(".trad").forEach(el => {
-      const original = el.textContent.trim();
-      if (translations[lang] && translations[lang][original]) {
-        el.textContent = translations[lang][original];
-      } else if (lang === "fr") {
-        const frText = Object.keys(translations.ar).find(key => translations.ar[key] === original);
-        if (frText) el.textContent = frText;
-      }
-    });
-  }
-
-  // Masquer l'intro après 4 secondes
-  setTimeout(() => {
-    const intro = document.getElementById('intro');
-    if (intro) intro.style.display = 'none';
-  }, 4000);
-</script>
-
-<!-- Selector langue -->
+<!-- Langue -->
 <div style="position: fixed; top: 10px; right: 10px; z-index: 99999;">
   <select id="languageSelector" onchange="translatePage()" style="padding: 5px 10px; font-weight: bold;">
     <option value="fr">Français</option>
@@ -211,5 +72,134 @@
   </select>
 </div>
 
+<!-- Intro -->
+<div id="intro">Groupe Auto École Wallili</div>
+
+<!-- Nav -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand trad" data-translate="brand" href="#">Groupe Auto École Wallili</a>
+    <span class="text-white trad" data-translate="subtitle">Meknès, Maroc | Tél : +212 620091202</span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-section text-center py-5">
+  <div class="container">
+    <img src="logo.JPG" alt="Logo Auto École Wallili" class="logo-img img-fluid mx-auto d-block" style="max-width: 220px;" />
+    <h1 class="display-5 trad" data-translate="hero-title">Bienvenue chez Groupe École Wallili</h1>
+    <p class="lead trad" data-translate="hero-subtitle">Formation de qualité pour tous les types de permis à Meknès, Maroc.</p>
+  </div>
+</section>
+
+<!-- À propos, réussite, avis -->
+<section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4 trad" data-translate="about-title" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">À propos</h2>
+    <p class="trad" data-translate="about-text">
+      Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc.
+      Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.
+    </p>
+    <h3 class="fw-bold mt-5 mb-3 trad" data-translate="success" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 Nos Élèves Réussissent !</h3>
+    <p class="trad" data-translate="success-text">Découvrez les réussites de nos élèves et leurs témoignages.</p>
+    <div class="row justify-content-center mb-4">
+      <div class="col-6 col-md-4 mb-3">
+        <img src="IMG_6636.jpg" alt="Élève réussi 1" class="img-fluid shadow-lg" style="max-height: 220px; object-fit: cover; width:100%;" />
+      </div>
+      <div class="col-6 col-md-4 mb-3">
+        <img src="IMG_6635.jpg" alt="Élève réussi 2" class="img-fluid shadow-lg" style="max-height: 220px; object-fit: cover; width:100%;" />
+      </div>
+    </div>
+    <h3 class="fw-bold mt-5 mb-3 trad" data-translate="review-title" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);">Avis ⭐⭐⭐⭐⭐ </h3>
+    <p class="trad" data-translate="review-text">Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !</p>
+    <div class="d-flex justify-content-center">
+      <img src="IMG_7249.jpg" alt="Avis élève" class="img-fluid shadow-lg" style="max-height: 200px; object-fit: cover; width: auto;" />
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4 trad" data-translate="contact-title">Contactez-nous</h2>
+    <p>WhatsApp : <a href="https://wa.me/212638467805" target="_blank">+212 638 467805</a></p>
+    <a href="https://www.instagram.com/autoecole_walili?igsh=d3IxbjNvNHBqMDVr" class="social-btn" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@auto_ecolewallili" class="social-btn" target="_blank">TikTok</a>
+    <p class="trad" data-translate="adr1">Adresse : Meknès, Mansour, Chehdia, derrière BIM</p>
+    <p class="trad" data-translate="adr2">Adresse : Zegotta centre, Sidi Kacem</p>
+    <p class="trad" data-translate="adr3">Adresse : Jorf El Melha, Sidi Kacem</p>
+    <p class="trad" data-translate="phone-title">Nos téléphones :</p>
+    <ul>
+      <li><a href="tel:+212620091202">+212 620-091202</a></li>
+      <li><a href="tel:+212638467805">+212 638-467805</a></li>
+      <li><a href="tel:+212538714036">+212 538–714036</a></li>
+    </ul>
+    <p>Notre email : <a href="mailto:abdeslemterraf38@gmail.com">abdeslemterraf38@gmail.com</a></p>
+    <p class="trad" data-translate="open-title">Heures d'ouverture :</p>
+    <ul>
+      <li class="trad" data-translate="open1">Lundi - Vendredi : 09:00 - 18:00</li>
+      <li class="trad" data-translate="open2">Samedi : 09:00 - 12:00</li>
+    </ul>
+    <button class="btn-3d mt-3 trad" data-translate="email-btn" onclick="window.location='mailto:abdeslemterraf38@gmail.com'">Envoyer un Email</button>
+  </div>
+</section>
+
+<footer class="footer text-center p-3 bg-dark text-white mt-4">
+  <div class="container">
+    <p>&copy; 2025 Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const translations = {
+  "ar": {
+    "brand": "مجموعة مدارس وليلي لتعليم السياقة",
+    "subtitle": "مكناس، المغرب | الهاتف: +212 620091202",
+    "hero-title": "مرحباً بكم في مجموعة مدارس وليلي",
+    "hero-subtitle": "تكوين عالي الجودة لجميع أنواع رخص السياقة بمكناس، المغرب.",
+    "about-title": "من نحن",
+    "about-text": "مجموعة واليي لتعليم السياقة ترافقكم نحو النجاح من خلال تكوينات عالية الجودة في عدة مدن مغربية. مدربونا ذوو خبرة يضمنون لكم تعلمًا مهنيًا وفعّالًا، يناسب كل متعلم.",
+    "success": "نجاحات تلاميذنا!",
+    "success-text": "اكتشفوا نجاحات تلاميذنا وشهاداتهم.",
+    "review-title": "تقييمات ⭐⭐⭐⭐⭐",
+    "review-text": "اطلعوا على تقييمات تلاميذنا الحقيقيين، شكراً لثقتكم!",
+    "contact-title": "اتصل بنا",
+    "adr1": "العنوان : مكناس، منصور، شهدية، خلف بيم",
+    "adr2": "العنوان : زڭوطة، سيدي قاسم",
+    "adr3": "العنوان : جرف الملحة، سيدي قاسم",
+    "phone-title": "أرقام الهاتف :",
+    "open-title": "ساعات العمل :",
+    "open1": "الإثنين - الجمعة : 09:00 - 18:00",
+    "open2": "السبت : 09:00 - 12:00",
+    "email-btn": "أرسل بريدًا إلكترونيًا"
+  },
+  "fr": {}
+};
+
+function translatePage() {
+  const lang = document.getElementById("languageSelector").value;
+  document.querySelectorAll("[data-translate]").forEach(el => {
+    const key = el.getAttribute("data-translate");
+    if (lang === "fr") {
+      el.dir = "ltr";
+      el.style.textAlign = "left";
+      el.textContent = el.dataset.fr || el.textContent;
+    } else if (translations[lang][key]) {
+      el.dir = "rtl";
+      el.style.textAlign = "right";
+      // sauvegarder le fr par défaut si pas déjà
+      if (!el.dataset.fr) el.dataset.fr = el.textContent;
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+// Intro hide
+setTimeout(() => {
+  const intro = document.getElementById('intro');
+  if (intro) intro.style.display = 'none';
+}, 4000);
+</script>
 </body>
 </html>
