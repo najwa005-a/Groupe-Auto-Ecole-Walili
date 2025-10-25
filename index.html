@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Groupe Auto École Wallili - Meknès</title>
+  <title>[translate:Groupe Auto École Wallili - Meknès]</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     #intro {
-      position: fixed; inset: 0; background: #b30000; color: white;
-      display: flex; justify-content: center; align-items: center;
-      font-size: 3.5rem; font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      z-index: 9999; animation: introAnimation 4s ease forwards; padding: 20px; text-align: center;
+      position: fixed;
+      inset: 0;
+      background: #b30000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      z-index: 9999;
+      animation: introAnimation 4s ease forwards;
+      text-align: center;
+      padding: 20px;
     }
     @keyframes introAnimation {
       0% { opacity: 0; transform: scale(0.7); }
@@ -18,38 +28,36 @@
       80% { opacity: 1; transform: scale(1); }
       100% { opacity: 0; transform: scale(0.7); visibility: hidden; }
     }
-    .hero-section { background-color: #f8f9ff; padding: 80px 0; text-align: center; }
+    .hero-section { background-color: #f8f9ff !important; padding: 80px 0; text-align: center; }
     .footer { background-color: #212529; color: white; padding: 20px 0; text-align: center; }
     .logo-img, .card-img-top { max-width: 100%; border-radius: 10px; }
     .logo-img { max-width: 200px; margin-bottom: 20px; }
-    .article-section, .py-5 { padding: 50px 0; }
+    .article-section { padding: 50px 0; }
     .dotted-line { border-top: 4px dotted #ff0000; width: 50%; margin: auto; }
     .text-primary { color: #ff0000 !important; }
     .text-warning { color: #ff4500 !important; }
     .bg-light { background-color: #ffffff !important; }
     .bg-white { background-color: #f8f9ff !important; }
-    .navbar-dark .navbar-brand, .navbar-dark .navbar-toggler { color: #fff; }
-    .social-btn {
-      display: inline-block; margin: 5px 10px; text-decoration: none; color: #fff;
-      background-color: #ff0000; padding: 8px 15px; border-radius: 5px; font-weight: bold;
-    }
+    .navbar-dark .navbar-brand, .navbar-dark .navbar-toggler { color: #ffffff; }
+    .social-btn { display: inline-block; margin: 5px 10px; text-decoration: none; color: #fff; background-color: #ff0000; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
     .social-btn:hover { background-color: #cc0000; }
     iframe { width: 100%; height: 450px; border: none; }
   </style>
 </head>
 <body>
-<!-- Language Selector -->
+
+<!-- Barre de traduction -->
 <div style="position: fixed; top: 10px; right: 10px; z-index: 99999;">
   <select id="languageSelector" onchange="translatePage()" style="padding: 5px 10px; font-weight: bold;">
-    <option value="fr">Français</option>
-    <option value="ar">العربية</option>
+    <option value="fr">[translate:Français]</option>
+    <option value="ar">[translate:العربية]</option>
   </select>
 </div>
 
-<!-- Intro Animation -->
+<!-- INTRO -->
 <div id="intro">[translate:Groupe Auto École Wallili]</div>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <div class="container">
     <a class="navbar-brand trad" href="#">[translate:Groupe Auto École Wallili]</a>
@@ -57,7 +65,7 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section class="hero-section">
   <div class="container">
     <img src="logo.JPG" alt="[translate:Logo Auto École Wallili]" class="logo-img img-fluid" />
@@ -66,32 +74,30 @@
   </div>
 </section>
 
-<!-- About, Success & Reviews -->
+<!-- À PROPOS + RÉUSSITE + AVIS -->
 <section class="py-5 bg-white text-center">
   <div class="container">
     <h2 class="fw-bold mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">[translate:À propos]</h2>
     <p>[translate:Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc. Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.]</p>
-    
     <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 [translate:Nos Élèves Réussissent !]</h3>
     <p>[translate:Découvrez les réussites de nos élèves et leurs témoignages.]</p>
     <div class="row justify-content-center mb-4">
       <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6636.jpg" alt="[translate:Élève réussi 1]" class="img-fluid rounded-4 shadow-lg" style="max-height:220px;object-fit:cover;width:100%;box-shadow:0 6px 30px rgba(0,0,0,0.22),0 1.5px 10px rgba(255,215,0,0.18)"/>
+        <img src="IMG_6636.jpg" alt="[translate:Élève réussi 1]" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
       </div>
       <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6635.jpg" alt="[translate:Élève réussi 2]" class="img-fluid rounded-4 shadow-lg" style="max-height:220px;object-fit:cover;width:100%;box-shadow:0 6px 30px rgba(0,0,0,0.22),0 1.5px 10px rgba(255,215,0,0.18)"/>
+        <img src="IMG_6635.jpg" alt="[translate:Élève réussi 2]" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
       </div>
     </div>
-
     <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);">[translate:Avis ⭐⭐⭐⭐⭐]</h3>
     <p>[translate:Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !]</p>
     <div class="d-flex justify-content-center">
-      <img src="IMG_7249.jpg" alt="[translate:Avis élève]" class="img-fluid rounded-4 shadow-lg" style="max-height:200px;object-fit:cover;width:auto;box-shadow:0 6px 22px rgba(0,0,0,0.13),0 1.5px 10px rgba(255,215,0,0.12)"/>
+      <img src="IMG_7249.jpg" alt="[translate:Avis élève]" class="img-fluid rounded-4 shadow-lg" style="max-height: 200px; object-fit: cover; width: auto; box-shadow: 0 6px 22px rgba(0,0,0,0.13), 0 1.5px 10px rgba(255,215,0,0.12);" />
     </div>
   </div>
 </section>
 
-<!-- Permit Types -->
+<!-- TYPES DE PERMIS -->
 <section class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4 trad">[translate:Types de permis disponibles]</h2>
@@ -112,11 +118,12 @@
   </div>
 </section>
 
-<!-- How it works -->
+<!-- COMMENT ÇA MARCHE -->
 <section class="py-5 bg-white text-center">
   <div class="container">
     <h2 class="fw-bold text-primary mb-3 trad">[translate:Comment ça marche]</h2>
-    <p class="lead trad">[translate:L'apprentissage du permis <span class='text-primary fw-bold'>transformé</span><br /><strong class='text-primary trad'>par Groupe École Wallili</strong>]</p>
+    <p class="lead trad">[translate:L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
+      <strong class="text-primary trad">par Groupe École Wallili</strong>]</p>
     <hr class="dotted-line my-4" />
     <div class="row mt-5">
       <div class="col-md-3 col-sm-6 mb-4">
@@ -159,9 +166,9 @@
   </div>
 </section>
 
-<!-- Contact -->
-<section class="py-5 text-center">
-  <div class="container">
+<!-- CONTACT -->
+<section class="py-5">
+  <div class="container text-center">
     <h2 class="mb-4 trad">[translate:Contactez-nous]</h2>
     <p>WhatsApp : <a href="https://wa.me/212638467805" target="_blank">+212 638 467805</a></p>
     <a href="https://www.instagram.com/autoecole_walili?igsh=d3IxbjNvNHBqMDVr">Instagram</a>
@@ -185,24 +192,51 @@
   </div>
 </section>
 
-<!-- Location -->
-<section class="py-5 text-center">
-  <div class="container">
+<!-- LOCALISATION -->
+<section class="py-5">
+  <div class="container text-center">
     <h2 class="mb-4 trad">[translate:Notre localisation]</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.697473854359!2d-5.5829062!3d33.863617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdc58362d2959827%3A0xb35f59b9a622998a!2sAuto%20Ecole%20Wallili!5e0!3m2!1sfr!2sma!4v1628178121658!5m2!1sfr!2sma" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.697473854359!2d-5.5829062!3d33.863617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdc58362d2959827%3A0xb35f59b9a622998a!2sAuto%20Ecole%20Wallili!5e0!3m2!1sfr!2sma!4v1628178121658!5m2!1sfr!2sma"
+        loading="lazy" allowfullscreen></iframe>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <p>&copy; 2025 [translate:Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.]</p>
   </div>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Traduction -->
 <script>
-  // Translation dictionary and function remain unchanged
-  // Hide intro after 4s
+  const translations = {
+    ar: {
+      "Groupe Auto École Wallili": "مجموعة مدارس وليلي لتعليم السياقة",
+      "Meknès, Maroc | Tél : +212 620091202": "مكناس، المغرب | الهاتف: +212 620091202",
+      "Bienvenue chez Groupe École Wallili": "مرحباً بكم في مجموعة مدارس وليلي",
+      "Formation de qualité pour tous les types de permis à Meknès, Maroc.": "تكوين عالي الجودة لجميع أنواع رخص السياقة بمكناس، المغرب.",
+      "À propos": "من نحن",
+      // ...autres traductions ici
+      "Envoyer un Email": "أرسل بريدًا إلكترونيًا"
+    }
+  };
+  function translatePage() {
+    const lang = document.getElementById("languageSelector").value;
+    document.querySelectorAll(".trad").forEach(el => {
+      const text = el.textContent.trim();
+      if (translations[lang] && translations[lang][text]) {
+        el.textContent = translations[lang][text];
+      } else if (lang === "fr") {
+        // Remettre en français si nécessaire
+      }
+    });
+  }
+</script>
+<!-- Masquer intro après 4s -->
+<script>
   setTimeout(() => {
     const intro = document.getElementById('intro');
     if (intro) intro.style.display = 'none';
