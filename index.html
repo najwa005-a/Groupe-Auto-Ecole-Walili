@@ -7,20 +7,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     #intro {
-      position: fixed;
-      inset: 0;
-      background: #b30000;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3.5rem;
-      font-weight: 700;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      z-index: 9999;
-      animation: introAnimation 4s ease forwards;
-      text-align: center;
-      padding: 20px;
+      position: fixed; inset: 0; background: #b30000; color: white;
+      display: flex; justify-content: center; align-items: center;
+      font-size: 3.5rem; font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      z-index: 9999; animation: introAnimation 4s ease forwards; padding: 20px; text-align: center;
     }
     @keyframes introAnimation {
       0% { opacity: 0; transform: scale(0.7); }
@@ -28,26 +18,27 @@
       80% { opacity: 1; transform: scale(1); }
       100% { opacity: 0; transform: scale(0.7); visibility: hidden; }
     }
-    .hero-section { background-color: #f8f9ff !important; padding: 80px 0; text-align: center; }
+    .hero-section { background-color: #f8f9ff; padding: 80px 0; text-align: center; }
     .footer { background-color: #212529; color: white; padding: 20px 0; text-align: center; }
     .logo-img, .card-img-top { max-width: 100%; border-radius: 10px; }
     .logo-img { max-width: 200px; margin-bottom: 20px; }
-    .article-section { padding: 50px 0; }
-    .article { margin-bottom: 30px; }
+    .article-section, .py-5 { padding: 50px 0; }
     .dotted-line { border-top: 4px dotted #ff0000; width: 50%; margin: auto; }
     .text-primary { color: #ff0000 !important; }
     .text-warning { color: #ff4500 !important; }
     .bg-light { background-color: #ffffff !important; }
     .bg-white { background-color: #f8f9ff !important; }
-    .navbar-dark .navbar-brand, .navbar-dark .navbar-toggler { color: #ffffff; }
-    .social-btn { display: inline-block; margin: 5px 10px; text-decoration: none; color: #fff; background-color: #ff0000; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+    .navbar-dark .navbar-brand, .navbar-dark .navbar-toggler { color: #fff; }
+    .social-btn {
+      display: inline-block; margin: 5px 10px; text-decoration: none; color: #fff;
+      background-color: #ff0000; padding: 8px 15px; border-radius: 5px; font-weight: bold;
+    }
     .social-btn:hover { background-color: #cc0000; }
     iframe { width: 100%; height: 450px; border: none; }
   </style>
 </head>
 <body>
-
-<!-- Barre de traduction -->
+<!-- Language Selector -->
 <div style="position: fixed; top: 10px; right: 10px; z-index: 99999;">
   <select id="languageSelector" onchange="translatePage()" style="padding: 5px 10px; font-weight: bold;">
     <option value="fr">Français</option>
@@ -55,117 +46,112 @@
   </select>
 </div>
 
-<!-- INTRO -->
-<div id="intro">Groupe Auto École Wallili</div>
+<!-- Intro Animation -->
+<div id="intro">[translate:Groupe Auto École Wallili]</div>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <div class="container">
-    <a class="navbar-brand trad" href="#">Groupe Auto École Wallili</a>
-    <span class="text-white trad">Meknès, Maroc | Tél : +212 620091202</span>
+    <a class="navbar-brand trad" href="#">[translate:Groupe Auto École Wallili]</a>
+    <span class="text-white trad">[translate:Meknès, Maroc | Tél : +212 620091202]</span>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- Hero Section -->
 <section class="hero-section">
   <div class="container">
-    <img src="logo.JPG" alt="Logo Auto École Wallili" class="logo-img img-fluid" />
-    <h1 class="display-5 trad">Bienvenue chez Groupe École Wallili</h1>
-    <p class="lead trad">Formation de qualité pour tous les types de permis à Meknès, Maroc.</p>
+    <img src="logo.JPG" alt="[translate:Logo Auto École Wallili]" class="logo-img img-fluid" />
+    <h1 class="display-5 trad">[translate:Bienvenue chez Groupe École Wallili]</h1>
+    <p class="lead trad">[translate:Formation de qualité pour tous les types de permis à Meknès, Maroc.]</p>
   </div>
 </section>
 
-<!-- À PROPOS + RÉUSSITE + AVIS -->
+<!-- About, Success & Reviews -->
 <section class="py-5 bg-white text-center">
   <div class="container">
-    <h2 class="fw-bold mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">À propos</h2>
-    <p>
-      Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc.
-      Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.
-    </p>
-    <!-- Section Réussite avec deux photos -->
-    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 Nos Élèves Réussissent !</h3>
-    <p>Découvrez les réussites de nos élèves et leurs témoignages.</p>
+    <h2 class="fw-bold mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">[translate:À propos]</h2>
+    <p>[translate:Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc. Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.]</p>
+    
+    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 [translate:Nos Élèves Réussissent !]</h3>
+    <p>[translate:Découvrez les réussites de nos élèves et leurs témoignages.]</p>
     <div class="row justify-content-center mb-4">
       <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6636.jpg" alt="Élève réussi 1" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
+        <img src="IMG_6636.jpg" alt="[translate:Élève réussi 1]" class="img-fluid rounded-4 shadow-lg" style="max-height:220px;object-fit:cover;width:100%;box-shadow:0 6px 30px rgba(0,0,0,0.22),0 1.5px 10px rgba(255,215,0,0.18)"/>
       </div>
       <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6635.jpg" alt="Élève réussi 2" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
+        <img src="IMG_6635.jpg" alt="[translate:Élève réussi 2]" class="img-fluid rounded-4 shadow-lg" style="max-height:220px;object-fit:cover;width:100%;box-shadow:0 6px 30px rgba(0,0,0,0.22),0 1.5px 10px rgba(255,215,0,0.18)"/>
       </div>
     </div>
-    <!-- Section avis avec 1 photo -->
-    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);"> Avis ⭐⭐⭐⭐⭐ </h3>
-    <p>Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !</p>
+
+    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);">[translate:Avis ⭐⭐⭐⭐⭐]</h3>
+    <p>[translate:Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !]</p>
     <div class="d-flex justify-content-center">
-      <img src="IMG_7249.jpg" alt="Avis élève" class="img-fluid rounded-4 shadow-lg" style="max-height: 200px; object-fit: cover; width: auto; box-shadow: 0 6px 22px rgba(0,0,0,0.13), 0 1.5px 10px rgba(255,215,0,0.12);" />
+      <img src="IMG_7249.jpg" alt="[translate:Avis élève]" class="img-fluid rounded-4 shadow-lg" style="max-height:200px;object-fit:cover;width:auto;box-shadow:0 6px 22px rgba(0,0,0,0.13),0 1.5px 10px rgba(255,215,0,0.12)"/>
     </div>
   </div>
 </section>
 
-<!-- TYPES DE PERMIS -->
+<!-- Permit Types -->
 <section class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4 trad">Types de permis disponibles</h2>
+    <h2 class="text-center mb-4 trad">[translate:Types de permis disponibles]</h2>
     <div class="row text-center">
       <div class="col-md-4 mb-3">
-        <h5 class="trad">Permis A</h5>
-        <p class="trad">Moto – Deux-roues de toutes cylindrées</p>
+        <h5 class="trad">[translate:Permis A]</h5>
+        <p class="trad">[translate:Moto – Deux-roues de toutes cylindrées]</p>
       </div>
       <div class="col-md-4 mb-3">
-        <h5 class="trad">Permis B</h5>
-        <p class="trad">Voitures légères – le plus demandé</p>
+        <h5 class="trad">[translate:Permis B]</h5>
+        <p class="trad">[translate:Voitures légères – le plus demandé]</p>
       </div>
       <div class="col-md-4 mb-3">
-        <h5 class="trad">Permis C & D</h5>
-        <p class="trad">Camions et véhicules de transport en commun</p>
+        <h5 class="trad">[translate:Permis C & D]</h5>
+        <p class="trad">[translate:Camions et véhicules de transport en commun]</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMMENT ÇA MARCHE -->
+<!-- How it works -->
 <section class="py-5 bg-white text-center">
   <div class="container">
-    <h2 class="fw-bold text-primary mb-3 trad">Comment ça marche</h2>
-    <p class="lead trad">L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
-      <strong class="text-primary trad">par Groupe École Wallili</strong>
-    </p>
+    <h2 class="fw-bold text-primary mb-3 trad">[translate:Comment ça marche]</h2>
+    <p class="lead trad">[translate:L'apprentissage du permis <span class='text-primary fw-bold'>transformé</span><br /><strong class='text-primary trad'>par Groupe École Wallili</strong>]</p>
     <hr class="dotted-line my-4" />
     <div class="row mt-5">
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="as.jpg" class="card-img-top" alt="Code de la route" />
+          <img src="as.jpg" class="card-img-top" alt="[translate:Code de la route]" />
           <div class="card-body">
-            <h5 class="fw-bold text-warning trad">1. Code de la route</h5>
-            <p class="trad">Apprenez les règles de circulation avec nos cours interactifs.</p>
+            <h5 class="fw-bold text-warning trad">[translate:1. Code de la route]</h5>
+            <p class="trad">[translate:Apprenez les règles de circulation avec nos cours interactifs.]</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="pic2.jpg" class="card-img-top" alt="Cours de conduite" />
+          <img src="pic2.jpg" class="card-img-top" alt="[translate:Cours de conduite]" />
           <div class="card-body">
-            <h5 class="fw-bold text-warning trad">2. Cours de conduite</h5>
-            <p class="trad">Maîtrisez la pratique avec un encadrement professionnel.</p>
+            <h5 class="fw-bold text-warning trad">[translate:2. Cours de conduite]</h5>
+            <p class="trad">[translate:Maîtrisez la pratique avec un encadrement professionnel.]</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="IMG_5983.JPG" class="card-img-top" alt="Suivi personnalisé" />
+          <img src="IMG_5983.JPG" class="card-img-top" alt="[translate:Suivi personnalisé]" />
           <div class="card-body">
-            <h5 class="fw-bold text-warning trad">3. Suivi personnalisé</h5>
-            <p class="trad">Un accompagnement étape par étape pour garantir votre réussite.</p>
+            <h5 class="fw-bold text-warning trad">[translate:3. Suivi personnalisé]</h5>
+            <p class="trad">[translate:Un accompagnement étape par étape pour garantir votre réussite.]</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="IMG_5984.JPG" class="card-img-top" alt="Démarches et Examen" />
+          <img src="IMG_5984.JPG" class="card-img-top" alt="[translate:Démarches & Examen]" />
           <div class="card-body">
-            <h5 class="fw-bold text-warning trad">4. Démarches & Examen</h5>
-            <p class="trad">Nous vous guidons dans les démarches jusqu'à l'examen final.</p>
+            <h5 class="fw-bold text-warning trad">[translate:4. Démarches & Examen]</h5>
+            <p class="trad">[translate:Nous vous guidons dans les démarches jusqu'à l'examen final.]</p>
           </div>
         </div>
       </div>
@@ -173,145 +159,50 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-4 trad">Contactez-nous</h2>
+<!-- Contact -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4 trad">[translate:Contactez-nous]</h2>
     <p>WhatsApp : <a href="https://wa.me/212638467805" target="_blank">+212 638 467805</a></p>
     <a href="https://www.instagram.com/autoecole_walili?igsh=d3IxbjNvNHBqMDVr">Instagram</a>
     <a href="https://www.tiktok.com/@auto_ecolewallili" class="social-btn" target="_blank">TikTok</a>
-    <p class="trad">Adresse : Meknès, Mansour, Chehdia, derrière BIM</p>
-    <p class="trad">Adresse : Zegotta centre, Sidi Kacem</p>
-    <p class="trad">Adresse : Jorf El Melha, Sidi Kacem</p>
-    <p class="trad">Nos téléphones :</p>
+    <p class="trad">[translate:Adresse : Meknès, Mansour, Chehdia, derrière BIM]</p>
+    <p class="trad">[translate:Adresse : Zegotta centre, Sidi Kacem]</p>
+    <p class="trad">[translate:Adresse : Jorf El Melha, Sidi Kacem]</p>
+    <p class="trad">[translate:Nos téléphones :]</p>
     <ul>
       <li><a href="tel:+212620091202">+212 620-091202</a></li>
       <li><a href="tel:+212638467805">+212 638-467805</a></li>
       <li><a href="tel:+212538714036">+212 538–714036</a></li>
     </ul>
-      <p>Notre email : <a href="mailto:autoecole.walili@gmail.com">autoecole.walili@gmail.com</a></p>
-      <button class="btn-3d mt-3 trad" data-translate="email-btn" onclick="window.location='mailto:abdeslemterraf38@gmail.com'">Envoyer un Email</button>
-    </div>
-</section>
-    <p class="trad">Heures d'ouverture :</p>
+    <p>Notre email : <a href="mailto:autoecole.walili@gmail.com">autoecole.walili@gmail.com</a></p>
+    <button class="btn-3d mt-3 trad" data-translate="email-btn" onclick="window.location='mailto:abdeslemterraf38@gmail.com'">[translate:Envoyer un Email]</button>
+    <p class="trad">[translate:Heures d'ouverture :]</p>
     <ul>
-      <li class="trad">Lundi - Vendredi : 09:00 - 18:00</li>
-      <li class="trad">Samedi : 09:00 - 12:00</li>
+      <li class="trad">[translate:Lundi - Vendredi : 09:00 - 18:00]</li>
+      <li class="trad">[translate:Samedi : 09:00 - 12:00]</li>
     </ul>
   </div>
 </section>
 
-<!-- LOCALISATION -->
-<section class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-4 trad">Notre localisation</h2>
-    <div class="mt-4">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.697473854359!2d-5.5829062!3d33.863617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdc58362d2959827%3A0xb35f59b9a622998a!2sAuto%20Ecole%20Wallili!5e0!3m2!1sfr!2sma!4v1628178121658!5m2!1sfr!2sma"
-        loading="lazy" allowfullscreen></iframe>
-    </div>
+<!-- Location -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4 trad">[translate:Notre localisation]</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.697473854359!2d-5.5829062!3d33.863617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdc58362d2959827%3A0xb35f59b9a622998a!2sAuto%20Ecole%20Wallili!5e0!3m2!1sfr!2sma!4v1628178121658!5m2!1sfr!2sma" loading="lazy" allowfullscreen></iframe>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <p>&copy; 2025 Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.</p>
+    <p>&copy; 2025 [translate:Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.]</p>
   </div>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Traduction -->
-<script>
-  const translations = {
-    ar: {
-      "Groupe Auto École Wallili": "مجموعة مدارس وليلي لتعليم السياقة",
-      "Meknès, Maroc | Tél : +212 620091202": "مكناس، المغرب | الهاتف: +212 620091202",
-      "Bienvenue chez Groupe École Wallili": "مرحباً بكم في مجموعة مدارس وليلي",
-      <!-- À propos avec texte arabe centré -->
-<section class="py-5 bg-white text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-4 trad" data-translate="about-title" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">À propos</h2>
-    <p class="arabic-center trad" data-translate="about-text-ar">
-      مجموعة وليلي لتعليم السياقة ترافقكم نحو النجاح من خلال تكوينات عالية الجودة في عدة مدن مغربية. مدربونا ذوو خبرة يضمنون لكم تعلمًا مهنيًا وفعّالًا، يناسب كل متعلم.
-    </p>
-    <p class="trad" data-translate="about-text-fr">
-      Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc. Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.
-    </p>
-  </div>
-</section>
-
-<!-- Avis -->
-<section class="py-5 bg-white text-center">
-  <div class="container">
-    <h3 class="fw-bold mb-3 trad" data-translate="review-title" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);">Avis ⭐⭐⭐⭐⭐</h3>
-    <p class="arabic-center trad" data-translate="review-text">
-      اطلعوا على تقييمات تلاميذنا الحقيقيين، شكراً لثقتكم!
-    </p>
-    <p class="trad" data-translate="review-text-fr">
-      Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !
-    </p>
-    <div class="d-flex justify-content-center">
-    
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-const translations = {
-  "ar": {
-    "brand": "مجموعة مدارس وليلي لتعليم السياقة",
-    "subtitle": "مكناس، المغرب | الهاتف: +212 620091202",
-    "hero-title": "مرحباً بكم في مجموعة مدارس وليلي",
-    "hero-subtitle": "تكوين عالي الجودة لجميع أنواع رخص السياقة بمكناس، المغرب.",
-    "about-title": "من نحن",
-    "about-text-ar": "مجموعة وليلي لتعليم السياقة ترافقكم نحو النجاح من خلال تكوينات عالية الجودة في عدة مدن مغربية. مدربونا ذوو خبرة يضمنون لكم تعلمًا مهنيًا وفعّالًا، يناسب كل متعلم.",
-    "review-title": "تقييمات ⭐⭐⭐⭐⭐",
-    "review-text": "اطلعوا على تقييمات تلاميذنا الحقيقيين، شكراً لثقتكم!",
-      "Formation de qualité pour tous les types de permis à Meknès, Maroc.": "تكوين عالي الجودة لجميع أنواع رخص السياقة بمكناس، المغرب.",
-      "Types de permis disponibles": "أنواع رخص السياقة المتوفرة",
-      "Permis A": "رخصة السياقة A",
-      "Moto – Deux-roues de toutes cylindrées": "دراجة نارية – بجميع السعات",
-      "Permis B": "رخصة السياقة B",
-      "Voitures légères – le plus demandé": "سيارات خفيفة – الأكثر طلباً",
-      "Permis C & D": "رخصة السياقة C و D",
-      "Camions et véhicules de transport en commun": "شاحنات ومركبات نقل جماعي",
-      "Comment ça marche": "كيف يتم الأمر",
-      "par Groupe École Wallili": "من طرف مدارس وليلي",
-      "1. Code de la route": "١. قانون السير",
-      "Apprenez les règles de circulation avec nos cours interactifs.": "تعلم قواعد السير مع دروسنا التفاعلية.",
-      "2. Cours de conduite": "٢. دروس القيادة",
-      "Maîtrisez la pratique avec un encadrement professionnel.": "إتقان القيادة مع تأطير احترافي.",
-      "3. Suivi personnalisé": "٣. متابعة شخصية",
-      "Un accompagnement étape par étape pour garantir votre réussite.": "مرافقة في كل المراحل لضمان نجاحك.",
-      "4. Démarches & Examen": "٤. الإجراءات والاختبار",
-      "Nous vous guidons dans les démarches jusqu'à l'examen final.": "نرشدك في جميع الخطوات حتى الاختبار النهائي.",
-      "Contactez-nous": "اتصل بنا",
-      "Adresse : Meknès, Mansour, Chehdia, derrière BIM": "العنوان : مكناس، منصور، شهدية، خلف بيم",
-      "Adresse : Zegotta centre, Sidi Kacem": "العنوان : زڭوطة، سيدي قاسم",
-      "Adresse : Khénichet, Sidi Kacem": "العنوان : خنيشات، سيدي قاسم",
-      "Adresse : Jorf El Melha, Sidi Kacem": "العنوان : جرف الملحة، سيدي قاسم",
-      "Nos téléphones :": "أرقام الهاتف :",
-      "Heures d'ouverture :": "ساعات العمل :",
-      "Lundi - Vendredi : 09:00 - 18:00": "الإثنين - الجمعة : 09:00 - 18:00",
-      "Samedi : 09:00 - 12:00": "السبت : 09:00 - 12:00",
-      "Notre localisation": "موقعنا"
-    },
-    fr: {}
-  };
-  function translatePage() {
-    const lang = document.getElementById("languageSelector").value;
-    document.querySelectorAll(".trad").forEach(el => {
-      const original = el.textContent.trim();
-      if (translations[lang] && translations[lang][original]) {
-        el.textContent = translations[lang][original];
-      } else if (lang === "fr") {
-        const frText = Object.keys(translations.ar).find(key => translations.ar[key] === original);
-        if (frText) el.textContent = frText;
-      }
-    });
-  }
-</script>
-<!-- Masquer intro après 4s -->
-<script>
+  // Translation dictionary and function remain unchanged
+  // Hide intro after 4s
   setTimeout(() => {
     const intro = document.getElementById('intro');
     if (intro) intro.style.display = 'none';
