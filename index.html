@@ -1,280 +1,2174 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Groupe Auto École Wallili - Meknès</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Auto École Walili | Chehdiya - Meknès</title>
+
+  <meta
+    name="description"
+    content="Auto École Walili à Chehdiya - Meknès. Formation permis toutes catégories, accompagnement personnalisé et préparation aux examens."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
   <style>
-    #intro {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #e30613;
+      --primary-dark: #b9000a;
+      --dark: #101010;
+      --dark2: #181818;
+      --white: #ffffff;
+      --light: #f6f6f6;
+      --gray: #777;
+      --gold: #f5b400;
+      --border: rgba(0,0,0,.08);
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
       position: fixed;
-      inset: 0;
-      background: #b30000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(10,10,10,.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .navbar {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: white;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo i {
+      color: var(--primary);
+      font-size: 27px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .nav-btn {
+      background: var(--primary);
+      padding: 11px 18px;
+      border-radius: 30px;
+    }
+
+    .nav-btn:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.55), rgba(0,0,0,.25)),
+        url("images/hero.jpg") center/cover no-repeat;
+      background-color: #151515;
+      display: flex;
+      align-items: center;
+      padding-top: 75px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      color: white;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(227,6,19,.15);
+      border: 1px solid rgba(227,6,19,.5);
+      padding: 9px 15px;
+      border-radius: 30px;
+      margin-bottom: 22px;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .badge i {
+      color: var(--primary);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1;
+      font-weight: 800;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      color: #ddd;
+      font-size: 17px;
+      line-height: 1.8;
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: .3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+      transform: translateY(-3px);
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      background: var(--primary);
+      color: white;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat {
+      text-align: center;
+      padding: 25px 10px;
+      border-right: 1px solid rgba(255,255,255,.2);
+    }
+
+    .stat:last-child {
+      border: none;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 27px;
+      font-weight: 800;
+    }
+
+    .stat span {
+      font-size: 13px;
+      opacity: .9;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title small {
+      color: var(--primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 5vw, 45px);
+      margin-top: 8px;
+      font-weight: 800;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 12px auto 0;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* ================= PERMIS ================= */
+
+    .permis-section {
+      background: var(--light);
+    }
+
+    .permis-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .permis-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid var(--border);
+      transition: .35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .permis-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.1);
+    }
+
+    .permis-card::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: var(--primary);
+      opacity: .06;
+      border-radius: 50%;
+      right: -20px;
+      top: -20px;
+    }
+
+    .permis-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 14px;
+      background: rgba(227,6,19,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .permis-card h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .permis-card p {
+      color: var(--gray);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* ================= SUCCESS ================= */
+
+    .success {
+      background: var(--dark);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .success::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: var(--primary);
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: .2;
+      right: -100px;
+      top: -100px;
+    }
+
+    .success-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .success h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .success h2 span {
+      color: var(--primary);
+    }
+
+    .success p {
+      color: #bbb;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      margin: 13px 0;
+      display: flex;
+      gap: 10px;
+      color: #ddd;
+    }
+
+    .check-list i {
+      color: #25d366;
+      margin-top: 4px;
+    }
+
+    .score-card {
+      min-height: 360px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 30px;
+      background: linear-gradient(145deg,#202020,#0c0c0c);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 30px 70px rgba(0,0,0,.3);
+    }
+
+    .score {
+      font-size: 100px;
+      font-weight: 900;
+      line-height: 1;
+      color: white;
+    }
+
+    .score span {
+      color: var(--primary);
+    }
+
+    .score-card .stars {
+      color: var(--gold);
+      font-size: 27px;
+      margin: 20px 0 10px;
+    }
+
+    .score-card p {
+      margin: 0;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* ================= VEHICLES ================= */
+
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .vehicle {
+      height: 330px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      background: #ddd;
+    }
+
+    .vehicle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+
+    .vehicle:hover img {
+      transform: scale(1.08);
+    }
+
+    .vehicle-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 40%, rgba(0,0,0,.9));
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+      color: white;
+    }
+
+    .vehicle-overlay h3 {
+      font-size: 22px;
+    }
+
+    .image-placeholder {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: #666;
+      background: linear-gradient(135deg,#eee,#d5d5d5);
+      text-align: center;
+    }
+
+    .image-placeholder i {
+      font-size: 50px;
+    }
+
+    /* ================= AVIS ================= */
+
+    .reviews-section {
+      background: var(--light);
+    }
+
+    .review-summary {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 3.5rem;
+      gap: 25px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .big-rating {
+      font-size: 55px;
+      font-weight: 800;
+    }
+
+    .rating-stars {
+      color: var(--gold);
+      font-size: 25px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .review-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .review-name {
       font-weight: 700;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      z-index: 9999;
-      animation: introAnimation 4s ease forwards;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    .review-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .review-date {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 15px;
+    }
+
+    /* ADD REVIEW */
+
+    .review-form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 35px;
+      border: 1px solid var(--border);
+    }
+
+    .review-form-box h3 {
+      margin-bottom: 20px;
+    }
+
+    .star-input {
+      display: flex;
+      gap: 7px;
+      margin: 10px 0 20px;
+    }
+
+    .star-input i {
+      font-size: 28px;
+      color: #ccc;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .star-input i.active,
+    .star-input i:hover {
+      color: var(--gold);
+    }
+
+    /* ================= FORM ================= */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--dark);
+      color: white;
+      padding: 35px;
+      border-radius: 25px;
+    }
+
+    .contact-info h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info > p {
+      color: #aaa;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .contact-item i {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(227,6,19,.15);
+      color: var(--primary);
+      border-radius: 12px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .contact-item span {
+      font-size: 14px;
+    }
+
+    .form-box {
+      background: var(--light);
+      padding: 35px;
+      border-radius: 25px;
+    }
+
+    .form-box h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .form-box > p {
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 14px;
+      border-radius: 10px;
+      outline: none;
+      background: white;
+      font-family: inherit;
+      transition: .2s;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--primary);
+    }
+
+    /* ================= SOCIAL ================= */
+
+    .social {
+      background: var(--dark);
+      color: white;
       text-align: center;
-      padding: 20px;
     }
-    @keyframes introAnimation {
-      0% { opacity: 0; transform: scale(0.7); }
-      40% { opacity: 1; transform: scale(1.1); }
-      80% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0.7); visibility: hidden; }
+
+    .social h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
     }
-    .hero-section { background-color: #f8f9ff !important; padding: 80px 0; text-align: center; }
-    .footer { background-color: #212529; color: white; padding: 20px 0; text-align: center; }
-    .logo-img, .card-img-top { max-width: 100%; border-radius: 10px; }
-    .logo-img { max-width: 200px; margin-bottom: 20px; }
-    .article-section { padding: 50px 0; }
-    .article { margin-bottom: 30px; }
-    .dotted-line { border-top: 4px dotted #ff0000; width: 50%; margin: auto; }
-    .text-primary { color: #ff0000 !important; }
-    .text-warning { color: #ff4500 !important; }
-    .bg-light { background-color: #ffffff !important; }
-    .bg-white { background-color: #f8f9ff !important; }
-    .navbar-dark .navbar-brand, .navbar-dark .navbar-toggler { color: #ffffff; }
-    .social-btn { display: inline-block; margin: 5px 10px; text-decoration: none; color: #fff; background-color: #ff0000; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
-    .social-btn:hover { background-color: #cc0000; }
-    iframe { width: 100%; height: 450px; border: none; }
+
+    .social p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .social-link {
+      padding: 13px 20px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      transition: .3s;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* ================= MAP ================= */
+
+    .map {
+      padding: 0;
+      height: 400px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #080808;
+      color: #aaa;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 1000;
+      box-shadow: 0 8px 30px rgba(37,211,102,.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,.5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 16px rgba(37,211,102,0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width: 850px) {
+
+      nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        display: none;
+        flex-direction: column;
+        padding: 25px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .permis-grid,
+      .vehicles-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .success-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 560px) {
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        padding: 18px 5px;
+      }
+
+      .stat strong {
+        font-size: 21px;
+      }
+
+      .permis-grid,
+      .vehicles-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info,
+      .form-box {
+        padding: 25px;
+      }
+
+      .score {
+        font-size: 75px;
+      }
+
+      .map {
+        height: 300px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<!-- Barre de traduction -->
-<div style="position: fixed; top: 10px; right: 10px; z-index: 99999;">
-  <select id="languageSelector" onchange="translatePage()" style="padding: 5px 10px; font-weight: bold;">
-    <option value="fr">Français</option>
-    <option value="ar">العربية</option>
-  </select>
+<!-- ================= HEADER ================= -->
+
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="logo">
+      <i class="fa-solid fa-car"></i>
+      AUTO <span>WALILI</span>
+    </a>
+
+    <nav id="nav">
+      <a href="#home">Accueil</a>
+      <a href="#permis">Permis</a>
+      <a href="#reussite">Réussite</a>
+      <a href="#vehicules">Véhicules</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact" class="nav-btn">
+        Contact
+      </a>
+    </nav>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        <i class="fa-solid fa-location-dot"></i>
+        Chehdiya — Meknès
+      </div>
+
+      <h1>
+        Votre permis.<br>
+        <span>Votre liberté.</span>
+      </h1>
+
+      <p>
+        Bienvenue chez Auto École Walili.
+        Une formation sérieuse, un accompagnement personnalisé
+        et une préparation complète pour réussir votre permis.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/212638467805?text=Salam%20Auto%20%C3%89cole%20Walili%2C%20je%20souhaite%20avoir%20des%20informations."
+          target="_blank"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Nous contacter
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="#permis"
+        >
+          Découvrir les permis
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong>40/40</strong>
+      <span>Objectif excellence</span>
+    </div>
+
+    <div class="stat">
+      <strong>★★★★★</strong>
+      <span>Satisfaction clients</span>
+    </div>
+
+    <div class="stat">
+      <strong>6+</strong>
+      <span>Catégories</span>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Accompagnement</span>
+    </div>
+
+  </div>
+
 </div>
 
-<!-- INTRO -->
-<div id="intro">Groupe Auto École Wallili</div>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-  <div class="container">
-    <a class="navbar-brand trad" href="#">Groupe Auto École Wallili</a>
-    <span class="text-white trad">Meknès, Maroc | Tél : +212 620091202</span>
-  </div>
-</nav>
+<!-- ================= PERMIS ================= -->
 
-<!-- HERO -->
-<section class="hero-section">
+<section class="permis-section" id="permis">
+
   <div class="container">
-    <img src="logo.JPG" alt="Logo Auto École Wallili" class="logo-img img-fluid" />
-    <h1 class="display-5 trad">Bienvenue chez Groupe École Wallili</h1>
-    <p class="lead trad">Formation de qualité pour tous les types de permis à Meknès, Maroc.</p>
+
+    <div class="section-title">
+
+      <small>Nos formations</small>
+
+      <h2>Toutes les catégories de permis</h2>
+
+      <p>
+        Choisissez votre catégorie et bénéficiez d'un accompagnement
+        adapté à votre niveau et à vos objectifs.
+      </p>
+
+    </div>
+
+
+    <div class="permis-grid">
+
+      <div class="permis-card">
+
+        <div class="permis-icon">
+          <i class="fa-solid fa-motorcycle"></i>
+        </div>
+
+        <h3>A1</h3>
+
+        <p>
+          Formation pour les motocyclettes légères.
+          Théorie et pratique avec accompagnement.
+        </p>
+
+      </div>
+
+
+      <div class="permis-card">
+
+        <div class="permis-icon">
+          <i class="fa-solid fa-motorcycle"></i>
+        </div>
+
+        <h3>A</h3>
+
+        <p>
+          Permis moto pour une conduite maîtrisée,
+          responsable et sécurisée.
+        </p>
+
+      </div>
+
+
+      <div class="permis-card">
+
+        <div class="permis-icon">
+          <i class="fa-solid fa-car"></i>
+        </div>
+
+        <h3>B</h3>
+
+        <p>
+          Permis voiture avec préparation au code
+          et à l'épreuve pratique.
+        </p>
+
+      </div>
+
+
+      <div class="permis-card">
+
+        <div class="permis-icon">
+          <i class="fa-solid fa-truck"></i>
+        </div>
+
+        <h3>C</h3>
+
+        <p>
+          Formation destinée aux véhicules lourds
+          et au transport professionnel.
+        </p>
+
+      </div>
+
+
+      <div class="permis-card">
+
+        <div class="permis-icon">
+          <i class="fa-solid fa-bus"></i>
+        </div>
+
+        <h3>D</h3>
+
+        <p>
+          Formation pour la conduite des autobus
+          et véhicules de transport de personnes.
+        </p>
+
+      </div>
+
+
+      <div class="permis-card">
+
+        <div class="permis-icon">
+          <i class="fa-solid fa-trailer"></i>
+        </div>
+
+        <h3>EC</h3>
+
+        <p>
+          Formation pour véhicules avec remorque
+          et ensembles de véhicules lourds.
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
-<!-- À PROPOS + RÉUSSITE + AVIS -->
-<section class="py-5 bg-white text-center">
+
+<!-- ================= SUCCESS ================= -->
+
+<section class="success" id="reussite">
+
+  <div class="container success-grid">
+
+    <div>
+
+      <small style="color:#e30613;font-weight:800;">
+        NOTRE OBJECTIF
+      </small>
+
+      <h2>
+        Préparez-vous pour
+        <span>40/40</span>
+      </h2>
+
+      <p>
+        Chez Auto École Walili, nous mettons l'accent sur
+        la préparation, la pratique et le suivi de chaque candidat.
+      </p>
+
+      <ul class="check-list">
+
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          Préparation au Code de la Route
+        </li>
+
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          Cours pratiques adaptés à votre niveau
+        </li>
+
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          Suivi personnalisé
+        </li>
+
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          Préparation à l'examen
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="score-card">
+
+      <div class="score">
+        40<span>/40</span>
+      </div>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p>
+        Chaque candidat vise la meilleure préparation
+        possible pour son examen.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= VEHICLES ================= -->
+
+<section id="vehicules">
+
   <div class="container">
-    <h2 class="fw-bold mb-4" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.2);">À propos</h2>
+
+    <div class="section-title">
+
+      <small>Notre matériel</small>
+
+      <h2>Nos véhicules</h2>
+
+      <p>
+        Ajoutez ici les vraies photos des véhicules
+        et motos utilisés par Auto École Walili.
+      </p>
+
+    </div>
+
+
+    <div class="vehicles-grid">
+
+      <!-- PHOTO 1 -->
+      <div class="vehicle">
+
+        <div class="image-placeholder">
+          <i class="fa-solid fa-car"></i>
+          <strong>Ajoutez votre photo voiture</strong>
+          <small>images/voiture1.jpg</small>
+        </div>
+
+        <!--
+        Remplacez le bloc ci-dessus par :
+
+        <img src="images/voiture1.jpg" alt="Voiture Auto École Walili">
+        -->
+
+        <div class="vehicle-overlay">
+          <h3>Voiture école</h3>
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 2 -->
+      <div class="vehicle">
+
+        <div class="image-placeholder">
+          <i class="fa-solid fa-car-side"></i>
+          <strong>Ajoutez votre photo voiture</strong>
+          <small>images/voiture2.jpg</small>
+        </div>
+
+        <div class="vehicle-overlay">
+          <h3>Formation Permis B</h3>
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 3 -->
+      <div class="vehicle">
+
+        <div class="image-placeholder">
+          <i class="fa-solid fa-motorcycle"></i>
+          <strong>Ajoutez votre photo moto</strong>
+          <small>images/moto.jpg</small>
+        </div>
+
+        <div class="vehicle-overlay">
+          <h3>Moto école</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= AVIS ================= -->
+
+<section class="reviews-section" id="avis">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>Témoignages</small>
+
+      <h2>Nos candidats parlent de nous</h2>
+
+      <p>
+        Vous avez passé votre permis avec Auto École Walili ?
+        Partagez votre expérience avec nous.
+      </p>
+
+    </div>
+
+
+    <div class="review-summary">
+
+      <div class="big-rating" id="averageRating">
+        5.0
+      </div>
+
+      <div>
+
+        <div class="rating-stars">
+          ★★★★★
+        </div>
+
+        <small>
+          Avis de nos candidats
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <!-- AVIS -->
+    <div
+      class="reviews-grid"
+      id="reviewsContainer"
+    ></div>
+
+
+    <!-- FORMULAIRE AVIS -->
+
+    <div class="review-form-box">
+
+      <h3>
+        ⭐ Laissez votre avis
+      </h3>
+
+      <form id="reviewForm">
+
+        <div class="field">
+
+          <label>
+            Votre nom
+          </label>
+
+          <input
+            type="text"
+            id="reviewName"
+            placeholder="Ex : Sara"
+            required
+          >
+
+        </div>
+
+
+        <label style="font-size:13px;font-weight:700;">
+          Votre note
+        </label>
+
+        <div
+          class="star-input"
+          id="starInput"
+        >
+
+          <i class="fa-solid fa-star" data-rating="1"></i>
+          <i class="fa-solid fa-star" data-rating="2"></i>
+          <i class="fa-solid fa-star" data-rating="3"></i>
+          <i class="fa-solid fa-star" data-rating="4"></i>
+          <i class="fa-solid fa-star" data-rating="5"></i>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Votre avis
+          </label>
+
+          <textarea
+            id="reviewText"
+            placeholder="Écrivez votre expérience avec Auto École Walili..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          <i class="fa-solid fa-paper-plane"></i>
+          Publier mon avis
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>Contact</small>
+
+      <h2>Une question ? Nous sommes là.</h2>
+
+      <p>
+        Remplissez le formulaire et votre demande sera envoyée
+        directement sur WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <!-- INFO -->
+
+      <div class="contact-info">
+
+        <h3>
+          Auto École Walili
+        </h3>
+
+        <p>
+          Votre partenaire pour apprendre à conduire
+          et préparer votre permis à Chehdiya — Meknès.
+        </p>
+
+
+        <div class="contact-item">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <div>
+            <strong>LOCALISATION</strong>
+            <span>Chehdiya — Meknès</span>
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          <div>
+            <strong>WHATSAPP</strong>
+
+            <span>
+              +212 638 467805
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <div>
+
+            <strong>TÉLÉPHONE</strong>
+
+            <span>
+              +212 638 467805
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <a
+          class="btn btn-primary"
+          style="width:100%;margin-top:10px;"
+          href="https://wa.me/212638467805"
+          target="_blank"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Ouvrir WhatsApp
+        </a>
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <div class="form-box">
+
+        <h3>
+          Contactez-nous
+        </h3>
+
+        <p>
+          Donnez-nous vos informations et votre demande.
+        </p>
+
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <div class="field">
+
+              <label>
+                Nom complet
+              </label>
+
+              <input
+                type="text"
+                id="clientName"
+                placeholder="Votre nom"
+                required
+              >
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Téléphone
+              </label>
+
+              <input
+                type="tel"
+                id="clientPhone"
+                placeholder="06 XX XX XX XX"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="field">
+
+              <label>
+                Ville
+              </label>
+
+              <select id="clientCity" required>
+
+                <option value="">
+                  Choisir
+                </option>
+
+                <option value="Chehdiya - Meknès">
+                  Chehdiya - Meknès
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Permis souhaité
+              </label>
+
+              <select id="permisChoice">
+
+                <option value="Permis B">
+                  Permis B
+                </option>
+
+                <option value="Permis A1">
+                  Permis A1
+                </option>
+
+                <option value="Permis A">
+                  Permis A
+                </option>
+
+                <option value="Permis C">
+                  Permis C
+                </option>
+
+                <option value="Permis D">
+                  Permis D
+                </option>
+
+                <option value="Permis EC">
+                  Permis EC
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>
+              Votre question / demande
+            </label>
+
+            <textarea
+              id="clientMessage"
+              placeholder="Écrivez votre question..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="width:100%;"
+          >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Envoyer sur WhatsApp
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SOCIAL ================= -->
+
+<section class="social">
+
+  <div class="container">
+
+    <h2>
+      Suivez Auto École Walili
+    </h2>
+
     <p>
-      Groupe Auto École Wallili vous accompagne vers la réussite avec des formations de qualité dans plusieurs villes du Maroc.
-      Nos moniteurs expérimentés vous garantissent un apprentissage professionnel et efficace, adapté à chaque élève.
+      Retrouvez nos actualités, nos candidats et nos résultats
+      sur nos réseaux sociaux.
     </p>
-    <!-- Section Réussite avec deux photos -->
-    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,215,0,0.5);">🏆 Nos Élèves Réussissent !</h3>
-    <p>Découvrez les réussites de nos élèves et leurs témoignages.</p>
-    <div class="row justify-content-center mb-4">
-      <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6636.jpg" alt="Élève réussi 1" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
-      </div>
-      <div class="col-6 col-md-4 mb-3">
-        <img src="IMG_6635.jpg" alt="Élève réussi 2" class="img-fluid rounded-4 shadow-lg" style="max-height: 220px; object-fit: cover; width:100%; box-shadow: 0 6px 30px rgba(0,0,0,0.22), 0 1.5px 10px rgba(255,215,0,0.18);" />
-      </div>
+
+
+    <div class="social-links">
+
+      <a
+        class="social-link"
+        href="https://www.instagram.com/autoecole_walili?igsh=MW1qejh0aWl6dXBxMQ=="
+        target="_blank"
+      >
+
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+
+      </a>
+
+
+      <a
+        class="social-link"
+        href="https://www.tiktok.com/@auto_ecolewallili?_r=1&_t=ZS-98nkvniPswP"
+        target="_blank"
+      >
+
+        <i class="fa-brands fa-tiktok"></i>
+        TikTok
+
+      </a>
+
+
+      <a
+        class="social-link"
+        href="https://www.facebook.com/share/18XpjUkw1B/?mibextid=wwXIfr"
+        target="_blank"
+      >
+
+        <i class="fa-brands fa-facebook-f"></i>
+        Facebook
+
+      </a>
+
     </div>
-    <!-- Section avis avec 1 photo -->
-    <h3 class="fw-bold mt-5 mb-3" style="text-shadow: 2px 2px 8px rgba(255,220,0,0.6);"> Avis ⭐⭐⭐⭐⭐ </h3>
-    <p>Découvrez les retours authentiques de nos élèves satisfaits. Merci pour votre confiance !</p>
-    <div class="d-flex justify-content-center">
-      <img src="IMG_7249.jpg" alt="Avis élève" class="img-fluid rounded-4 shadow-lg" style="max-height: 200px; object-fit: cover; width: auto; box-shadow: 0 6px 22px rgba(0,0,0,0.13), 0 1.5px 10px rgba(255,215,0,0.12);" />
-    </div>
+
   </div>
+
 </section>
 
-<!-- TYPES DE PERMIS -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4 trad">Types de permis disponibles</h2>
-    <div class="row text-center">
-      <div class="col-md-4 mb-3">
-        <h5 class="trad">Permis A</h5>
-        <p class="trad">Moto – Deux-roues de toutes cylindrées</p>
-      </div>
-      <div class="col-md-4 mb-3">
-        <h5 class="trad">Permis B</h5>
-        <p class="trad">Voitures légères – le plus demandé</p>
-      </div>
-      <div class="col-md-4 mb-3">
-        <h5 class="trad">Permis C & D</h5>
-        <p class="trad">Camions et véhicules de transport en commun</p>
-      </div>
-    </div>
-  </div>
+
+<!-- ================= MAP ================= -->
+
+<section class="map">
+
+  <iframe
+    src="https://www.google.com/maps?q=Auto%20Ecole%20Walili%20Meknes&output=embed"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+
 </section>
 
-<!-- COMMENT ÇA MARCHE -->
-<section class="py-5 bg-white text-center">
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
   <div class="container">
-    <h2 class="fw-bold text-primary mb-3 trad">Comment ça marche</h2>
-    <p class="lead trad">L'apprentissage du permis <span class="text-primary fw-bold">transformé</span><br />
-      <strong class="text-primary trad">par Groupe École Wallili</strong>
+
+    <p>
+      ©️ 2026
+      <strong>Auto École Walili</strong>
+      — Chehdiya, Meknès.
     </p>
-    <hr class="dotted-line my-4" />
-    <div class="row mt-5">
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="as.jpg" class="card-img-top" alt="Code de la route" />
-          <div class="card-body">
-            <h5 class="fw-bold text-warning trad">1. Code de la route</h5>
-            <p class="trad">Apprenez les règles de circulation avec nos cours interactifs.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="pic2.jpg" class="card-img-top" alt="Cours de conduite" />
-          <div class="card-body">
-            <h5 class="fw-bold text-warning trad">2. Cours de conduite</h5>
-            <p class="trad">Maîtrisez la pratique avec un encadrement professionnel.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="IMG_5983.JPG" class="card-img-top" alt="Suivi personnalisé" />
-          <div class="card-body">
-            <h5 class="fw-bold text-warning trad">3. Suivi personnalisé</h5>
-            <p class="trad">Un accompagnement étape par étape pour garantir votre réussite.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="IMG_5984.JPG" class="card-img-top" alt="Démarches et Examen" />
-          <div class="card-body">
-            <h5 class="fw-bold text-warning trad">4. Démarches & Examen</h5>
-            <p class="trad">Nous vous guidons dans les démarches jusqu'à l'examen final.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-4 trad">Contactez-nous</h2>
-    <p>WhatsApp : <a href="https://wa.me/212638467805" target="_blank">+212 638 467805</a></p>
-    <a href="https://www.instagram.com/autoecole_walili?igsh=d3IxbjNvNHBqMDVr">Instagram</a>
-    <a href="https://www.tiktok.com/@auto_ecolewallili" class="social-btn" target="_blank">TikTok</a>
-    <p class="trad">Adresse : Meknès, Mansour, Chehdia, derrière BIM</p>
-    <p class="trad">Adresse : Zegotta centre, Sidi Kacem</p>
-    <p class="trad">Adresse : Jorf El Melha, Sidi Kacem</p>
-    <p class="trad">Nos téléphones :</p>
-    <ul>
-      <li><a href="tel:+212620091202">+212 620-091202</a></li>
-      <li><a href="tel:+212638467805">+212 638-467805</a></li>
-      <li><a href="tel:+212538714036">+212 538–714036</a></li>
-    </ul>
-    <p>Notre email : <a href="mailto:autoecole.walili@gmail.com">autoecole.walili@gmail.com</a></p>
-    <p class="trad">Heures d'ouverture :</p>
-    <ul>
-      <li class="trad">Lundi - Vendredi : 09:00 - 18:00</li>
-      <li class="trad">Samedi : 09:00 - 12:00</li>
-    </ul>
-  </div>
-</section>
+    <p style="margin-top:8px;">
+      Tous droits réservés.
+    </p>
 
-<!-- LOCALISATION -->
-<section class="py-5">
-  <div class="container text-center">
-    <h2 class="mb-4 trad">Notre localisation</h2>
-    <div class="mt-4">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.697473854359!2d-5.5829062!3d33.863617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdc58362d2959827%3A0xb35f59b9a622998a!2sAuto%20Ecole%20Wallili!5e0!3m2!1sfr!2sma!4v1628178121658!5m2!1sfr!2sma"
-        loading="lazy" allowfullscreen></iframe>
-    </div>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Groupe Auto École Wallili - Meknès - Sidi Kacem - Zegotta.</p>
-  </div>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Traduction -->
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/212638467805?text=Salam%20Auto%20%C3%89cole%20Walili%2C%20je%20souhaite%20avoir%20des%20informations."
+  target="_blank"
+  aria-label="WhatsApp"
+>
+
+  <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
-  const translations = {
-    ar: {
-      "Groupe Auto École Wallili": "مجموعة مدارس وليلي لتعليم السياقة",
-      "Meknès, Maroc | Tél : +212 620091202": "مكناس، المغرب | الهاتف: +212 620091202",
-      "Bienvenue chez Groupe École Wallili": "مرحباً بكم في مجموعة مدارس وليلي",
-      "Formation de qualité pour tous les types de permis à Meknès, Maroc.": "تكوين عالي الجودة لجميع أنواع رخص السياقة بمكناس، المغرب.",
-      "Types de permis disponibles": "أنواع رخص السياقة المتوفرة",
-      "Permis A": "رخصة السياقة A",
-      "Moto – Deux-roues de toutes cylindrées": "دراجة نارية – بجميع السعات",
-      "Permis B": "رخصة السياقة B",
-      "Voitures légères – le plus demandé": "سيارات خفيفة – الأكثر طلباً",
-      "Permis C & D": "رخصة السياقة C و D",
-      "Camions et véhicules de transport en commun": "شاحنات ومركبات نقل جماعي",
-      "Comment ça marche": "كيف يتم الأمر",
-      "par Groupe École Wallili": "من طرف مدارس وليلي",
-      "1. Code de la route": "١. قانون السير",
-      "Apprenez les règles de circulation avec nos cours interactifs.": "تعلم قواعد السير مع دروسنا التفاعلية.",
-      "2. Cours de conduite": "٢. دروس القيادة",
-      "Maîtrisez la pratique avec un encadrement professionnel.": "إتقان القيادة مع تأطير احترافي.",
-      "3. Suivi personnalisé": "٣. متابعة شخصية",
-      "Un accompagnement étape par étape pour garantir votre réussite.": "مرافقة في كل المراحل لضمان نجاحك.",
-      "4. Démarches & Examen": "٤. الإجراءات والاختبار",
-      "Nous vous guidons dans les démarches jusqu'à l'examen final.": "نرشدك في جميع الخطوات حتى الاختبار النهائي.",
-      "Contactez-nous": "اتصل بنا",
-      "Adresse : Meknès, Mansour, Chehdia, derrière BIM": "العنوان : مكناس، منصور، شهدية، خلف بيم",
-      "Adresse : Zegotta centre, Sidi Kacem": "العنوان : زڭوطة، سيدي قاسم",
-      "Adresse : Khénichet, Sidi Kacem": "العنوان : خنيشات، سيدي قاسم",
-      "Adresse : Jorf El Melha, Sidi Kacem": "العنوان : جرف الملحة، سيدي قاسم",
-      "Nos téléphones :": "أرقام الهاتف :",
-      "Heures d'ouverture :": "ساعات العمل :",
-      "Lundi - Vendredi : 09:00 - 18:00": "الإثنين - الجمعة : 09:00 - 18:00",
-      "Samedi : 09:00 - 12:00": "السبت : 09:00 - 12:00",
-      "Notre localisation": "موقعنا"
-    },
-    fr: {}
-  };
-  function translatePage() {
-    const lang = document.getElementById("languageSelector").value;
-    document.querySelectorAll(".trad").forEach(el => {
-      const original = el.textContent.trim();
-      if (translations[lang] && translations[lang][original]) {
-        el.textContent = translations[lang][original];
-      } else if (lang === "fr") {
-        const frText = Object.keys(translations.ar).find(key => translations.ar[key] === original);
-        if (frText) el.textContent = frText;
-      }
-    });
+
+  /* ================= MENU ================= */
+
+  function toggleMenu() {
+
+    document
+      .getElementById("nav")
+      .classList
+      .toggle("active");
+
   }
+
+
+  /* ================= WHATSAPP CONTACT ================= */
+
+  const contactForm =
+    document.getElementById("contactForm");
+
+
+  contactForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name =
+      document.getElementById("clientName").value.trim();
+
+    const phone =
+      document.getElementById("clientPhone").value.trim();
+
+    const city =
+      document.getElementById("clientCity").value;
+
+    const permis =
+      document.getElementById("permisChoice").value;
+
+    const message =
+      document.getElementById("clientMessage").value.trim();
+
+
+    const text =
+`🚗 *Nouvelle demande — Auto École Walili*
+
+👤 Nom : ${name}
+
+📱 Téléphone : ${phone}
+
+📍 Ville : ${city}
+
+🎓 Permis souhaité : ${permis}
+
+💬 Question / demande :
+${message}
+
+📌 Envoyé depuis le site web Auto École Walili.`;
+
+
+    const whatsappURL =
+      "https://wa.me/212638467805?text=" +
+      encodeURIComponent(text);
+
+
+    window.open(
+      whatsappURL,
+      "_blank"
+    );
+
+  });
+
+
+  /* ================= REVIEWS ================= */
+
+  let selectedRating = 0;
+
+  const stars =
+    document.querySelectorAll(
+      "#starInput i"
+    );
+
+
+  stars.forEach(star => {
+
+    star.addEventListener("click", function() {
+
+      selectedRating =
+        Number(
+          this.dataset.rating
+        );
+
+      updateStars();
+
+    });
+
+  });
+
+
+  function updateStars() {
+
+    stars.forEach(star => {
+
+      const rating =
+        Number(
+          star.dataset.rating
+        );
+
+      star.classList.toggle(
+        "active",
+        rating <= selectedRating
+      );
+
+    });
+
+  }
+
+
+  /* ================= DEFAULT REVIEWS ================= */
+
+  const defaultReviews = [
+
+    {
+      name: "Yassine",
+      rating: 5,
+      text: "Très bonne expérience. Une équipe sérieuse et un bon accompagnement.",
+      date: "Candidat Auto École Walili"
+    },
+
+    {
+      name: "Sara",
+      rating: 5,
+      text: "Très satisfaite de ma formation. Les explications sont claires et les moniteurs sont à l'écoute.",
+      date: "Candidat Auto École Walili"
+    },
+
+    {
+      name: "Omar",
+      rating: 5,
+      text: "Bonne préparation et très bon suivi. Merci à toute l'équipe Walili.",
+      date: "Candidat Auto École Walili"
+    }
+
+  ];
+
+
+  let reviews =
+    JSON.parse(
+      localStorage.getItem(
+        "waliliReviews"
+      )
+    ) || defaultReviews;
+
+
+  /* ================= DISPLAY REVIEWS ================= */
+
+  function displayReviews() {
+
+    const container =
+      document.getElementById(
+        "reviewsContainer"
+      );
+
+
+    container.innerHTML = "";
+
+
+    reviews.forEach(review => {
+
+      const card =
+        document.createElement("div");
+
+      card.className =
+        "review-card";
+
+
+      const starsHTML =
+        "★".repeat(review.rating) +
+        "☆".repeat(5 - review.rating);
+
+
+      card.innerHTML = `
+
+        <div class="review-top">
+
+          <div class="review-name">
+            ${escapeHTML(review.name)}
+          </div>
+
+          <div class="review-stars">
+            ${starsHTML}
+          </div>
+
+        </div>
+
+        <p>
+          ${escapeHTML(review.text)}
+        </p>
+
+        <div class="review-date">
+          ${escapeHTML(review.date)}
+        </div>
+
+      `;
+
+
+      container.appendChild(card);
+
+    });
+
+
+    calculateAverage();
+
+  }
+
+
+  /* ================= ADD REVIEW ================= */
+
+  document
+    .getElementById("reviewForm")
+    .addEventListener(
+      "submit",
+      function(e) {
+
+        e.preventDefault();
+
+
+        if(selectedRating === 0) {
+
+          alert(
+            "Veuillez choisir une note ⭐"
+          );
+
+          return;
+
+        }
+
+
+        const name =
+          document
+            .getElementById(
+              "reviewName"
+            )
+            .value
+            .trim();
+
+
+        const text =
+          document
+            .getElementById(
+              "reviewText"
+            )
+            .value
+            .trim();
+
+
+        const newReview = {
+
+          name: name,
+
+          rating:
+            selectedRating,
+
+          text: text,
+
+          date:
+            new Date()
+              .toLocaleDateString(
+                "fr-FR"
+              )
+
+        };
+
+
+        reviews.unshift(
+          newReview
+        );
+
+
+        localStorage.setItem(
+          "waliliReviews",
+          JSON.stringify(reviews)
+        );
+
+
+        this.reset();
+
+        selectedRating = 0;
+
+        updateStars();
+
+        displayReviews();
+
+
+        alert(
+          "Merci pour votre avis ⭐"
+        );
+
+      }
+    );
+
+
+  /* ================= AVERAGE ================= */
+
+  function calculateAverage() {
+
+    if(!reviews.length) {
+
+      document
+        .getElementById(
+          "averageRating"
+        )
+        .textContent = "0.0";
+
+      return;
+
+    }
+
+
+    const total =
+      reviews.reduce(
+        (sum, review) =>
+          sum + Number(review.rating),
+        0
+      );
+
+
+    const average =
+      total / reviews.length;
+
+
+    document
+      .getElementById(
+        "averageRating"
+      )
+      .textContent =
+        average.toFixed(1);
+
+  }
+
+
+  /* ================= SECURITY ================= */
+
+  function escapeHTML(text) {
+
+    const div =
+      document.createElement("div");
+
+    div.textContent =
+      text;
+
+    return div.innerHTML;
+
+  }
+
+
+  /* ================= START ================= */
+
+  displayReviews();
+
 </script>
-<!-- Masquer intro après 4s -->
-<script>
-  setTimeout(() => {
-    const intro = document.getElementById('intro');
-    if (intro) intro.style.display = 'none';
-  }, 4000);
-</script>
+
 </body>
 </html>
